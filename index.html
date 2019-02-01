@@ -160,30 +160,9 @@ drift.load('vapivbzfwytw');
                                 <img class="features-illustration asset-light" src="dist/images/powered.png" alt="getmakerlog & shipstreams">
                             </div>
                             <!-- Add a placeholder for the Twitch embed -->
-                            <div id="twitch-embed"></div>
-
-                            <!-- Load the Twitch embed script -->
-                            <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-                            <!--
-                              Create a Twitch.Embed object that will render
-                              within the "twitch-embed" root element.
-                            -->
-                            <script type="text/javascript">
-                              var embed = new Twitch.Embed("twitch-embed", {
-                                width: 854,
-                                height: 480,
-                                channel: "fajarsiddiq",
-                                layout: "video",
-                                theme: "dark",
-                                autoplay: true
-                              });
-
-                              embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-                                var player = embed.getPlayer();
-                                player.play();
-                              });
-                            </script>
+			<div class="video__wrap">
+    			<iframe class="video__element" src="https://player.twitch.tv/?channel=fajarsiddiq&muted=true&autoplay=true" frameborder="0" />
+  			</div>
                                <br>
 								<h2 class="section-title mt-0">My Maker Log ✅</h2>
 	                            <p class="section-paragraph">Fajar Siddiq often uses Maker Log as a logging task on a day to day basis with what he have done everyday for his startups, side-projects, volunteering, collaboration work & daily task. Using this let him improve mental-health, work & life balance. Here below you can see the task he have logged.</p>
