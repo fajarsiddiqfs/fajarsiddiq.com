@@ -22,6 +22,35 @@
   gtag('config', 'UA-109151584-1');
 </script>
 
+<!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('vapivbzfwytw');
+</script>
+<!-- End of Async Drift Code -->
+
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/10f8b899be6ca1c14a6b23623/84e10649fc08c396d41b9ed4f.js");</script>
 
 
@@ -96,6 +125,7 @@
                                 I am a professional yo-yo player, judge and performer & mentor. I have been doing it for 20 years in the skills toys industry. I'm an ex <a href="https://www.youtube.com/watch?v=mNagFcG2wyE">duncan crew worldwide</a> sponsored member from 2002-2014 by Duncan Toys, USA. My other hobbies & digital skills include video-editing, recording, social media, photography and astrography. On my free time, i memorize & recite Holy Book of Quran, Reading Islamic Books, Volunteer Community Projects & hang out with my close friends, love ones & neighbours. Currently i'm making some side projects: Maker's Marketplace, Maker's Merch & Open Startup. I'm using Macbook Pro 15" 2018 to do my work digitally everywhere. Currently i've travelled 9 countries to explore the world of adventures as Digital Nomad. I've travelled to Malaysia, Indonesia, Phillippines, Thailand, Vietnam, Brunei, Hong Kong, Japan & Saudi Arabia. My dream is to go USA & Europe countries to explore. </p>
 
                 <section class="features section">
+                <div class="container">
                         <div class="features-header text-center">
                             <div class="container-sm">
                                 <h2 class="section-title mt-0">My Digital Nomad Story 🚀👨🏻‍💻💡</h2>
@@ -112,13 +142,12 @@
                         </div>
                         </div>
                     </section>
-                                <p>
                                 Fajar Siddiq is the co-founder of Euphorya™ a Yishun, Singapore based Creative Design Agency which he started in his room in 2005. In 2011 he registered the business in Yishun, Singapore with his friends building creative design agency offering graphic designs & web-design products to startups, communities & companies. Fajar is responsible for setting the overall direction and product strategy for the business. He leads as graphic designer and web-developer of Euphorya’s branding & marketing services and development of the web-design services. Fajar graduated from Architectural at Institue Of Technical Education, Balestier Campus in 2003.</p>
-                                <p>
+
                                 Fajar attended Institue Of Technical Education, Balestier and studied Architectural before founding Euphorya. It started as a freelancer running a side project designing tshirts, drawing vector illustrations faces of people on photoshop and doing silk-screen printing t-shirts selling it online in locally and worldwide. Early life, He also pick-up yoyoing as a hobby since he was 12 years old and Fajar also represent the pinnacle of yo-yo skill across the globe as professional yo-yo player, contest yo-yo judge and also as a yo-yo instructor.</p>
-                                <p>
+
                                 In 2011, Fajar co-founded Dement Clothing™ a Yishun, Singapore based clothing brand. The designer clothes made for street & lifestyle culture products from printed graphic designs on t-shirt, polo-t, hoodie long sleeve.</p>
-                                <p>
+
                                 In 2014, Fajar co-founded Ilm Productions™ after coming back from holy city of Islam in Makkah Al-Mukarramah & Al-Madīnah Al-Munawwarah for Pilgrimage, Umrah in Saudi Arabia, he founded a start-up team up with the dakwaah community to do creative and media work like designing, video-recording/editing and live-streaming.</p>
                                 <center>
                                 <img src="dist/images/6.svg" alt="Macbook Pro 15inch">
@@ -130,37 +159,37 @@
                                 <img class="features-illustration asset-dark" src="dist/images/poweredz.png" alt="getmakerlog & shipstreams"> 
                                 <img class="features-illustration asset-light" src="dist/images/powered.png" alt="getmakerlog & shipstreams">
                             </div>
-			
+
+							
                             <!-- Add a placeholder for the Twitch embed -->
-                    <section class="features section">
-                        <div class="features-header text-center">
-                            <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
+                            
+							<div class="videoWrapper">
+							<div id="twitch-embed"></div>
 
-    <!-- Load the Twitch embed script -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+                            <!-- Load the Twitch embed script -->
+                            <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-    <!--
-      Create a Twitch.Embed object that will render
-      within the "twitch-embed" root element.
-    -->
-    <script type="text/javascript">
-      var embed = new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
-        channel: "fajarsiddiq",
-        layout: "video",
-        autoplay: true
-      });
+                            <!--
+                              Create a Twitch.Embed object that will render
+                              within the "twitch-embed" root element.
+                            -->
+                            <script type="text/javascript">
+                              var embed = new Twitch.Embed("twitch-embed", {
+                                width: 854,
+                                height: 480,
+                                channel: "fajarsiddiq",
+                                layout: "video",
+                                theme: "dark",
+                                autoplay: true
+                              });
 
-      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-        var player = embed.getPlayer();
-        player.play();
-      });
-    </script>
-                        </div>
-                    </section>
-			</center>
+                              embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+                                var player = embed.getPlayer();
+                                player.play();
+                              });
+                            </script>
+
+
                                <br>
                                <div>
 								<h2 class="section-title mt-0">My Maker Log ✅</h2>
@@ -262,7 +291,7 @@
                                     </div>
                                     <div class="feature-content">
                                         <h3 class="feature-title mt-0">🛠 Makers Marketplace</h3>
-                                        <p class="text-sm mb-0">Marketplace For Makers. Buy & Sell Digital Products. We are here to support the community
+                                        <p class="text-sm mb-0">#1 Maker's Fun-Size .XYZ Side Projects Marketplace For Makers. Join the community, share & learn, buy/sell digital products & services.
                                         <br>
                                         <br>
                                         🌐 Coming Soon: <a href="https://www.makersmarketplace.xyz">www.makersmarketplace.xyz</a></p>
@@ -317,6 +346,22 @@
                               <div class="infogram-embed" data-id="57912930-4190-4212-a86b-053f32740e61" data-type="interactive" data-title="Euphorya"></div><script>!function(e,t,s,i){var n="InfogramEmbeds",o=e.getElementsByTagName("script")[0],d=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(i)&&(i=d+i),window[n]&&window[n].initialized)window[n].process&&window[n].process();else if(!e.getElementById(s)){var r=e.createElement("script");r.async=1,r.id=s,r.src=i,o.parentNode.insertBefore(r,o)}}(document,0,"infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/57912930-4190-4212-a86b-053f32740e61" style="color:#989898!important;text-decoration:none!important;" target="_blank">Euphorya</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
                                 <br>
                                 <br>
+                                  <h2 class="section-title mt-0">My Medium Blog 📝</h2>
+                                  <p class="section-paragraph">Fajar Siddiq often blogs about life, hobby, nomading, startup and entrepreneurship of his journey.</p>
+                                <center>
+                                    <!-- Blog-->
+                                    <section class="section blog" id="blog">
+                                      <div class="container">
+                                        <div class="section-content" id="blogContent">
+                                          <div class="wrapper" id="jsonContent"></div>
+                                        </div>
+                                        <!-- /#blogContent-->
+                                        <br>
+                                        <div class="view-all text-center"><a class="btn btn-dark" id="loadBlogPosts" href="//medium.jasonmdesign.com">Follow me on Medium <i class="fab fa-medium"></i></a></div>
+                                      </div>
+                                      <!-- /.container-->
+                                    </section>
+                                    <!-- Blog-->
                                 <br>
                                 <br>       
                         <h2 class="section-title mt-0">My Location 📍</h2>
@@ -341,16 +386,13 @@
                         <div class="google-maps">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2037.3614980008126!2d103.8363987217255!3d1.4379607329554414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da14626c5727ff%3A0x6b252a33b099e57f!2sEuphorya!5e0!3m2!1sen!2ssg!4v1548011409107" width="600" height="450" frameborder="0" style="border:0"></iframe>
                         </div>
-                    <h2> Buy Me A Coffee ☕</h2>         
+                    <h2> My Newsletter 💌</h2>         
                     <div class="control">
-                    <a class="button button-primary button-block button-shadow" href="https://www.buymeacoffee.com/fajarsiddiq">Buy Me A Coffee ☕</a>
+                    <a class="button button-primary button-block button-shadow" href="https://mailchi.mp/ca51d295ce46/fajarsiddiq">Subscribe</a>
                     <br>
                     I will like to share with you my journey as a Digital Nomad.
-                    If that sounds good to you, buy me a coffee to support my journey.
-		    My goals is also to pay bills when times are tough and feeling low. 
-		    I can feel all motivated and positive, but the reality sucks sometimes.
-		    It also supports my mental health, i don't want to feel stress, worried or anxiety.
-                    </p>
+                    If that sounds good to you, come subscribe & don't worry it's not spam.
+                    You can unsubscribe anytime.</p>
                     </div>
                         <center>
                         <h2> My Contact 🤳🏻</h2>    
@@ -407,9 +449,7 @@
     <a href="https://www.indieworkspace.com/users/e9103ada-db81-47cd-b4ee-e9899579fa89"><i class="fas fa-laptop"></i></a>
     <a href="https://themeforest.net/user/fajarsiddiq"><i class="fas fa-leaf"></i></a>
     <a href="https://creativemarket.com/fajarsiddiq"><i class="fas fa-tag"></i></a>
-    <a href="https://gravatar.com/fajarsiddiq"><i class="fas fa-user-circle"></i></a>
-    <a href="https://gumroad.com/fajarsiddiq"><i class="fas fa-hand-holding-usd"></i>
-    <a href="https://paypal.me/fajarsiddiq"><i class="fab fa-paypal"></i>
+    <a href="https://gravatar.com/fajarsiddiq"><i class="fas fa-user-circle"></i></a>  
 <!---Ends Social Media Links-->  
 <br>
 <br
@@ -481,6 +521,9 @@
             </div>
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="jquery-dateformat.min.js"></script>
     <script src="dist/js/main.min.js"></script>
+    <script src="medium.js"></script>
 </body>
 </html>
