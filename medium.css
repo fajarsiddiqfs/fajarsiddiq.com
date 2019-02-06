@@ -15,7 +15,6 @@ body {
 		display: grid;
     grid-gap: 10px;
 		grid-template-columns: repeat(auto-fill ) ;
-		background-color: #fff;
 		color: #444;
 	}
 
@@ -104,4 +103,12 @@ body {
 
 #blog {
   height: 620px;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 0.9rem;
+  }
 }
