@@ -20,7 +20,7 @@ $(function () {
         output += '<div class="post-content"><div class="grid-title">' + item.title + '</div>';
         output += '<div class="author">'+item.author+'</div>';
 				output += '</div></a></div></div>';
-				return k < 3;
+				return k < 5;
 			});
 			$content.html(output);
 		}
