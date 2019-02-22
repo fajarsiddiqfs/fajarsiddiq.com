@@ -1,0 +1,14 @@
+<div id="mCSB_1" class="mCustomScrollBox mCS-dark-3 mCSB_vertical_horizontal mCSB_inside" style="max-height: 131px;" tabindex="0"><div id="mCSB_1_container_wrapper" class="mCSB_container_wrapper mCS_y_hidden mCS_no_scrollbar_y"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: -100px; width: 100%;" dir="ltr"></div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-3 mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div><div id="mCSB_1_scrollbar_horizontal" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-3 mCSB_scrollTools_horizontal" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_horizontal" class="mCSB_dragger" style="position: absolute; min-width: 30px; display: block; width: 0px; left: 0px;"><div class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div><?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
+<url>
+  <loc>https://www.fajarsiddiq.com/blog</loc>
+  <priority>0.7</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2019-02-22</lastmod>
+</url>
+<url>
+  <loc>https://www.fajarsiddiq.com</loc>
+  <priority>0.7</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2019-02-22</lastmod>
+</url>
