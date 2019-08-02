@@ -92,40 +92,6 @@
             </style>
 
     <!--  End Of All Scripts  -->
-<script>
-        var stripe = Stripe('pk_live_0tpwmBWwHQ8bIk8r2hyTxCSB');
-
-        var checkout = function (e) {
-            // When the customer clicks on the button, redirect
-            // them to Checkout.
-            stripe.redirectToCheckout({
-                items: [{ sku: e.target.value, quantity: 1 }],
-
-                // Do not rely on the redirect to the successUrl for fulfilling
-                // purchases, customers may not always reach the success_url after
-                // a successful payment.
-                // Instead use one of the strategies described in
-                // https://stripe.com/docs/payments/checkout/fulfillment
-                successUrl: 'https://www.fajarsiddiq.com/success',
-                cancelUrl: 'https://www.fajarsiddiq.com/canceled',
-            })
-                .then(function (result) {
-                    if (result.error) {
-                        // If redirectToCheckout fails due to a browser or network
-                        // error, display the localized error message to your customer.
-                        // var displayError = document.getElementById('error-message');
-                        // displayError.textContent = result.error.message;
-                        console.log(result.error.message);
-                    }
-                });
-        }
-
-        var checkoutButtons = document.querySelectorAll('.checkout-button');
-        checkoutButtons.forEach(function (button) {
-            button.addEventListener('click', checkout);
-        });
-    </script>
-
     </head>
 
 <body class="is-boxed has-animations">
@@ -652,6 +618,39 @@
         </footer>
     </div>
     <script src="dist/js/main.min.js"></script>
+     <script>
+        var stripe = Stripe('pk_live_0tpwmBWwHQ8bIk8r2hyTxCSB');
+
+        var checkout = function (e) {
+            // When the customer clicks on the button, redirect
+            // them to Checkout.
+            stripe.redirectToCheckout({
+                items: [{ sku: e.target.value, quantity: 1 }],
+
+                // Do not rely on the redirect to the successUrl for fulfilling
+                // purchases, customers may not always reach the success_url after
+                // a successful payment.
+                // Instead use one of the strategies described in
+                // https://stripe.com/docs/payments/checkout/fulfillment
+                successUrl: 'https://www.fajarsiddiq.com/success',
+                cancelUrl: 'https://www.fajarsiddiq.com/canceled',
+            })
+                .then(function (result) {
+                    if (result.error) {
+                        // If redirectToCheckout fails due to a browser or network
+                        // error, display the localized error message to your customer.
+                        // var displayError = document.getElementById('error-message');
+                        // displayError.textContent = result.error.message;
+                        console.log(result.error.message);
+                    }
+                });
+        }
+
+        var checkoutButtons = document.querySelectorAll('.checkout-button');
+        checkoutButtons.forEach(function (button) {
+            button.addEventListener('click', checkout);
+        });
+    </script>
 </body>
 
 </html>
