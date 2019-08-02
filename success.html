@@ -617,8 +617,8 @@
             </div>
         </footer>
     </div>
-    <script src="dist/js/main.min.js"></script>
-     <script>
+    <script src="https://js.stripe.com/v3"></script>
+    <script>
         var stripe = Stripe('pk_live_0tpwmBWwHQ8bIk8r2hyTxCSB');
 
         var checkout = function (e) {
@@ -651,6 +651,6 @@
             button.addEventListener('click', checkout);
         });
     </script>
+    <script src="dist/js/main.min.js"></script>
 </body>
-
 </html>
