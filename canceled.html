@@ -81,9 +81,50 @@
             .testimonial-link {
             position: relative;
             }
+
+            .lights-off .testimonial-inner {
+            background: #202d3f;
+        	}
+
+        	.lights-off .testimonial-name {
+            color: #8595ae;
+        	}
             </style>
 
     <!--  End Of All Scripts  -->
+<script>
+        var stripe = Stripe('pk_live_0tpwmBWwHQ8bIk8r2hyTxCSB');
+
+        var checkout = function (e) {
+            // When the customer clicks on the button, redirect
+            // them to Checkout.
+            stripe.redirectToCheckout({
+                items: [{ sku: e.target.value, quantity: 1 }],
+
+                // Do not rely on the redirect to the successUrl for fulfilling
+                // purchases, customers may not always reach the success_url after
+                // a successful payment.
+                // Instead use one of the strategies described in
+                // https://stripe.com/docs/payments/checkout/fulfillment
+                successUrl: 'https://www.fajarsiddiq.com/success',
+                cancelUrl: 'https://www.fajarsiddiq.com/canceled',
+            })
+                .then(function (result) {
+                    if (result.error) {
+                        // If redirectToCheckout fails due to a browser or network
+                        // error, display the localized error message to your customer.
+                        // var displayError = document.getElementById('error-message');
+                        // displayError.textContent = result.error.message;
+                        console.log(result.error.message);
+                    }
+                });
+        }
+
+        var checkoutButtons = document.querySelectorAll('.checkout-button');
+        checkoutButtons.forEach(function (button) {
+            button.addEventListener('click', checkout);
+        });
+    </script>
 
     </head>
 
@@ -160,51 +201,7 @@
                                 Branding & Marketing in the Creative Industry. He creates masterpiece either from
                                 scratch, existing or new ideas. He is experienced with ad hoc projects, small and
                                 medium sized enterprise projects. Do let me know your date & time for the consultation on Branding & Marketing. Once you made payment, let's chat on telegram for booking schedule, follow up introduction & discussion.</p>
-                                <div class="cta-cta">
-                                    <!-- Load Stripe.js on your website. -->
-                                    <script src="https://js.stripe.com/v3"></script>
-
-                                    <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-                                    <button class="button button-primary" id="checkout-button-sku_FPoINda6cXjMPS"
-                                        role="link">
-                                        🤑 Get Started
-                                    </button>
-
-                                    <div id="error-message"></div>
-
-                                    <script>
-                                        var stripe = Stripe('pk_live_0tpwmBWwHQ8bIk8r2hyTxCSB');
-
-                                        var checkoutButton = document.getElementById('checkout-button-sku_FPoINda6cXjMPS');
-                                        checkoutButton.addEventListener('click', function () {
-                                            // When the customer clicks on the button, redirect
-                                            // them to Checkout.
-                                            stripe.redirectToCheckout({
-                                                items: [{ sku: 'sku_FPoINda6cXjMPS', quantity: 1 }],
-
-                                                // Do not rely on the redirect to the successUrl for fulfilling
-                                                // purchases, customers may not always reach the success_url after
-                                                // a successful payment.
-                                                // Instead use one of the strategies described in
-                                                // https://stripe.com/docs/payments/checkout/fulfillment
-                                                successUrl: 'https://www.fajarsiddiq.com/success',
-                                                cancelUrl: 'https://www.fajarsiddiq.com/canceled',
-                                            })
-                                                .then(function (result) {
-                                                    if (result.error) {
-                                                        // If `redirectToCheckout` fails due to a browser or network
-                                                        // error, display the localized error message to your customer.
-                                                        var displayError = document.getElementById('error-message');
-                                                        displayError.textContent = result.error.message;
-                                                    }
-                                                });
-                                        });
-                                    </script>
-                                </div>
-                            </div>
-                            </br>
-                            <!-- Load Stripe.js on your website. -->
-                            <i>*Payment made via Stripe</i>
+                                <button class="button button-primary checkout-button" value="sku_FPoINda6cXjMPS" role="link">🤑 Get Started</button>
                         </div>
                     </div>
                 </div>
@@ -251,8 +248,9 @@
                                         </ul>
                                     </div>
                                     <div class="pricing-table-cta">
-                                        <a class="button button-primary button-shadow button-block" href="">Get
-                                            started</a>
+                                   	 <center>
+                                     <button class="button button-primary checkout-button" value="sku_FUpvVfxvWjZwkM" role="link">🤑 Get Started</button>
+                                 	</center>
                                     </div>
                                 </div>
                             </div>
@@ -293,8 +291,9 @@
                                     </div>
                                     
                                     <div class="pricing-table-cta">
-                                        <a class="button button-primary button-shadow button-block" href="">Get
-                                            started</a>
+                                   	 <center>
+                                     <button class="button button-primary checkout-button" value="sku_FVIK3oZgEZYbvR" role="link">🤑 Get Started</button>
+                                 	</center>
                                     </div>
                                 </div>
                             </div>
@@ -334,8 +333,9 @@
                                         </ul>
                                     </div>
                                     <div class="pricing-table-cta">
-                                        <a class="button button-primary button-shadow button-block" href="">Get
-                                            started</a>
+                                   	 <center>
+                                     <button class="button button-primary checkout-button" value="sku_FUvT9AA2YQKyF4" role="link">🤑 Get Started</button>
+                                 	</center>
                                     </div>
                                 </div>
                             </div>
