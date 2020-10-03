@@ -1,9 +1,8 @@
-# Making Official Fajar Siddiq Personal Website
+# Fajar Siddiq Website
 
-## Offical Fajar Siddiq Domain
+## Offical Fajar Siddiq 
 
 Domain: https://www.fajarsiddiq.com
-Credit: Cruip
 
 ### Build in Public Library (FREE WIFI)
 More on blog: https://fajarsiddiq.com/blog
