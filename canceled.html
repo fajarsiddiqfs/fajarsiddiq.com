@@ -520,40 +520,6 @@
 <script src="https://js.stripe.com/v3"></script>
 
 
-<div id="error-message"></div>
-
-<script>
-(function() {
-  var stripe = Stripe('pk_live_0tpwmBWwHQ8bIk8r2hyTxCSB');
-
-  var checkoutButton = document.getElementById('checkout-button-sku_FUpvVfxvWjZwkM');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'sku_FUpvVfxvWjZwkM', quantity: 1}],
-      mode: 'payment',
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfill-orders
-      successUrl: 'https://www.fajarsiddiq.com/success',
-      cancelUrl: 'https://www.fajarsiddiq.com/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
-
-
  <script src="dist/js/main.min.js"></script>
 <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fajarsiddiq" data-description="🤑 Support my meal, groceries & bills!" data-message="☕ Chat with me https://t.me/fajarsiddiq" data-color="#6736DD" data-position="right" data-x_margin="18" data-y_margin="18"></script>
 
