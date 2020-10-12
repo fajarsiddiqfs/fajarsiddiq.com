@@ -33,8 +33,24 @@
     <link rel="stylesheet" href="dist/css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
-    <!-- Load Stripe.js on your website. -->
+     <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3/"></script>
+
+    <script>
+        var stripe = Stripe('pk_live_0tpwmBWwHQ8bIk8r2hyTxCSB' );
+        function sendToStripe(sku, quantity = 1) {
+            stripe.redirectToCheckout({
+                items: [
+                    {
+                        sku,
+                        quantity
+                    }
+                ],
+                successUrl: 'https://fajarsiddiq.com/success',
+                cancelUrl: 'https://fajarsiddiq.com/canceled'
+            })
+        }
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109151584-1"></script>
