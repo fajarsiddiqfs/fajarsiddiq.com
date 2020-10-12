@@ -38,11 +38,11 @@
 
     <script>
         var stripe = Stripe('pk_live_0tpwmBWwHQ8bIk8r2hyTxCSB' );
-        function sendToStripe(plan, quantity = 1) {
+        function sendToStripe(sku, quantity = 1) {
             stripe.redirectToCheckout({
                 items: [
                     {
-                        plan,
+                        sku,
                         quantity
                     }
                 ],
