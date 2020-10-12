@@ -36,6 +36,22 @@
     <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3/"></script>
 
+    <script>
+        var stripe = Stripe('pk_live_0tpwmBWwHQ8bIk8r2hyTxCSB);
+        function sendToStripe(plan, quantity = 1) {
+            stripe.redirectToCheckout({
+                items: [
+                    {
+                        plan,
+                        quantity
+                    }
+                ],
+                successUrl: 'https://fajarsiddiq.com/',
+                cancelUrl: 'https://fajarsiddiq.com/'
+            })
+        }
+    </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109151584-1"></script>
     <script>
@@ -138,7 +154,7 @@
                                 Branding & Marketing in the Creative Industry. He creates masterpiece either from
                                 scratch, existing or new ideas. He is experienced with ad hoc projects, small and
                                 medium sized enterprise projects. Do let me know your date & time for the consultation on Branding & Marketing. Once you made payment, let's chat on telegram for booking schedule, follow up introduction & discussion.</p>
-                                <button class="button button-primary checkout-button" value="sku_FPoINda6cXjMPS" role="link">🤑 Get Started</button>
+                                <button class="button button-primary checkout-button" onClick="sendToStripe('sku_FPoINda6cXjMPS')" role="link">🤑 Get Started</button>
                         </div>
                     </div>
                 </div>
@@ -187,7 +203,7 @@
                                     </div>
                                     <div class="pricing-table-cta">
                                      <center>
-                                     <button class="button button-primary checkout-button" value="sku_FUpvVfxvWjZwkM" role="link">🤑 Get Started</button>
+                                     <button class="button button-primary checkout-button" onClick="sendToStripe('sku_FUpvVfxvWjZwkM')" role="link">🤑 Get Started</button>
                                     </center>
                                     </div>
                                 </div>
@@ -231,7 +247,7 @@
                                     
                                     <div class="pricing-table-cta">
                                      <center>
-                                     <button class="button button-primary checkout-button" value="sku_FVIK3oZgEZYbvR" role="link">🤑 Get Started</button>
+                                     <button class="button button-primary checkout-button" onClick="sendToStripe('sku_FVIK3oZgEZYbvR')" role="link">🤑 Get Started</button>
                                     </center>
                                     </div>
                                 </div>
